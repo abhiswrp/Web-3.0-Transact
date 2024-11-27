@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 const WalletsSection = () => {
   const [wallets, setWallets] = useState([]);
   const [transactions, setTransactions] = useState([]);
@@ -26,24 +27,26 @@ const WalletsSection = () => {
 
   return (
     <div className="wallets-section">
-      <h3>Connected Wallets</h3>
+      <h3 className="text-lg font-bold mb-2">Connected Wallets</h3>
       {wallets.length === 0 ? (
         <p>No wallets connected</p>
       ) : (
         wallets.map((wallet, index) => (
-          <div key={index} className="wallet">
+          <div key={index} className="wallet bg-gray-700 p-2 rounded-md mb-2">
             <p>Address: {wallet.address}</p>
             <p>Balance: {wallet.balance}</p>
           </div>
         ))
       )}
-
-      <h3>Transaction History</h3>
+      <h3 className="text-lg font-bold mt-4 mb-2">Transaction History</h3>
       {transactions.length === 0 ? (
         <p>No transactions found</p>
       ) : (
         transactions.map((transaction, index) => (
-          <div key={index} className="transaction">
+          <div
+            key={index}
+            className="transaction bg-gray-700 p-2 rounded-md mb-2"
+          >
             <p>Transaction Hash: {transaction.hash}</p>
             <p>Amount: {transaction.amount}</p>
             <p>Date: {transaction.date}</p>
@@ -53,4 +56,5 @@ const WalletsSection = () => {
     </div>
   );
 };
+
 export default WalletsSection;

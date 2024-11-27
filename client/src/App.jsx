@@ -1,5 +1,10 @@
 import React from 'react';
-import { Navbar, Welcome, Services, Transactions, Footer } from './components';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Welcome from './components/Welcome';
+import Services from './components/Services';
+import Transactions from './components/Transactions';
+import Footer from './components/Footer';
 import Wallets from './components/Wallets';
 
 const App = () => {
