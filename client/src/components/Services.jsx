@@ -40,7 +40,7 @@ const Services=()=>
                         subtitle="Security is guaranteed. We always maintain privacy and maintain the quality of our products."
                     />
                     <ServiceCard
-                        color="bg-[#89845F8]"
+                        color="bg-[#0F0F0F]"
                         title="Best exchange rates"
                         icons={<BiSearchAlt fontSize={21} className="text-white"/>}
                         subtitle="Security is guaranteed. We always maintain privacy and maintain the quality of our products."
