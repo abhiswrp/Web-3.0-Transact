@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import WalletsSection from '../components/WalletsSection'; // Corrected import for default export
+import WalletsSection from '../components/WalletsSection';
 import logo from '../../images/Abhishek_Swaroop_Sign.png';
 
 const NavbarItem = ({ title, href, classProps }) => (

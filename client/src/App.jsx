@@ -10,7 +10,7 @@ import Wallets from './components/Wallets';
 
 const App = () => {
   return (
-    <Router>  {/* Wrap your components with Router */}
+    <Router>
       <div className="min-h-screen">
         <div className="gradient-bg-welcome">
           <Navbar />

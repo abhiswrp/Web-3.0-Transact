@@ -76,7 +76,7 @@
 
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { TransactionContext } from '../context/TransactionContext'; // Changed to named import
+import { TransactionContext } from '../context/TransactionContext';
 import useFetch from "../hooks/useFetch";
 import { shortenAddress } from '../utils/shortenAddress';
 
@@ -108,7 +108,7 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, 
                     )}
                 </div>
                 <img
-                    src={gifUrl || url || 'fallback-image-url.gif'} // Ensure fallback image URL
+                    src={gifUrl || url || 'fallback-image-url.gif'}
                     alt="nature"
                     className="w-full h-64 2xl:h-96 rounded-md shadow-lg object-cover"
                 />
