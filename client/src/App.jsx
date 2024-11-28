@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
 import Services from './components/Services';
@@ -9,16 +10,18 @@ import Wallets from './components/Wallets';
 
 const App = () => {
   return (
-    <div className="min-h-screen">
-      <div className="gradient-bg-welcome">
-        <Navbar />
-        <Welcome />
+    <Router>  {/* Wrap your components with Router */}
+      <div className="min-h-screen">
+        <div className="gradient-bg-welcome">
+          <Navbar />
+          <Welcome />
+        </div>
+        <Services />
+        <Transactions />
+        <Wallets />
+        <Footer />
       </div>
-      <Services />
-      <Transactions />
-      <Wallets />
-      <Footer />
-    </div>
+    </Router>
   );
 };
 
