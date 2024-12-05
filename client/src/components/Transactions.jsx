@@ -74,6 +74,8 @@
 //     };
 //     export default Transactions;
 
+
+
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { TransactionContext } from '../context/TransactionContext';
@@ -142,9 +144,13 @@ const Transactions = () => {
                     <h3 className="text-white text-3xl text-center my-2">Connect your account to see the latest Transactions</h3>
                 )}
                 <div className="flex flex-wrap justify-center items-center mt-10">
-                    {transactions.reverse().map((transaction, i) => (
-                        <TransactionCard key={i} {...transaction} />
-                    ))}
+                    {transactions.length > 0 ? (
+                        transactions.reverse().map((transaction, i) => (
+                            <TransactionCard key={i} {...transaction} />
+                        ))
+                    ) : (
+                        <p className="text-white text-xl">No transactions available</p>
+                    )}
                 </div>
             </div>
         </div>

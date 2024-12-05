@@ -27,7 +27,7 @@
 // export default useFetch;
 
 import { useEffect, useState, useCallback } from "react";
-import PropTypes from "prop-types"; // Importing PropTypes
+import PropTypes from "prop-types";
 
 const APIKEY = import.meta.env.VITE_GIPHY_API;
 
@@ -68,9 +68,8 @@ const GifComponent = ({ keyword }) => {
   );
 };
 
-// Adding prop types for validation
 GifComponent.propTypes = {
-  keyword: PropTypes.string.isRequired, // Validate that 'keyword' is a required string
+  keyword: PropTypes.string.isRequired,
 };
 
 export default GifComponent;

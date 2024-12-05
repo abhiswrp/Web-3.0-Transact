@@ -10,5 +10,6 @@ app.use('/api/wallets', walletsRoute);
 
 const transactionsRoute = require('./routes/transactions');
 app.use('/api/transactions', transactionsRoute);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Backend server running on port ${PORT}`));
